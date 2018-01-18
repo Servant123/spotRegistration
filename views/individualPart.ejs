@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+
+  
+<% for(var x in data)
+{
+      for(var i=0;i< data[x].length; i++)
+      {
+        console.log(data[x][i].name);
+        console.log(data[x][i].school);
+      }
+}
+%>
+ <% for(var x in data){%>
+
+		<h1><%= x %></h1>
+
+  		<table>
+  		<% for(var i=0; i< data[x].length; i++){ %>
+  		<tr>
+  			<td> <%= data[x][i].name %> </td>
+  			<td> <%= data[x][i].class %> </td>
+  			<td> <%= data[x][i].school %> </td>
+  		</tr>
+
+      <%}%>
+  		</table>
+
+    <%}%>
+
+
+
+</body>
+</html>
